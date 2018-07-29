@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="es" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script language="JavaScript">
+      var synth = window.speechSynthesis;
+      voices = synth.getVoices();
+      function habla(){
+        var frase ="Hola Mundo"
+        var utterThis = new SpeechSynthesisUtterance(frase);
+        utterThis.voice= voices[5];
+        utterThis.pitch = 1
+        utterThis.rate = 1
+        synth.speak(utterThis);
+      }
+    </script>
+  </head>
+  <body onload="habla()">
+    <p>Hola</p>
+  </body>
+</html>
